@@ -37,7 +37,6 @@
             position: relative;
         }
 
-        /* Profile Header */
         header {
             text-align: center;
             padding: 40px 0;
@@ -78,7 +77,6 @@
             text-transform: uppercase;
         }
 
-        /* Futuristic Tabs */
         .nav-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -113,7 +111,6 @@
             box-shadow: 0 0 30px var(--accent);
         }
 
-        /* Content Cards */
         .card {
             display: none;
             position: relative;
@@ -135,28 +132,8 @@
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
 
-        /* Border Glow Effect */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: 15px;
-            padding: 2px;
-            background: linear-gradient(45deg, var(--accent), transparent, var(--accent-2), transparent);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            pointer-events: none;
-            animation: borderSlide 4s linear infinite;
-        }
-
-        @keyframes borderSlide {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
-        }
-
         h3 { font-family: 'Orbitron'; color: var(--accent); border-bottom: 1px solid var(--glass); padding-bottom: 10px; margin-top: 0; }
 
-        /* Skills Grid */
         .skill-group { margin-bottom: 25px; }
         .group-title { font-family: 'Orbitron'; font-size: 0.8rem; color: var(--accent-2); margin-bottom: 10px; display: block; }
         
@@ -171,12 +148,7 @@
         }
         .skill-item:hover { transform: translateX(10px); background: rgba(0, 210, 255, 0.1); }
 
-        /* Experience Section */
-        .exp-box { margin-bottom: 20px; padding-left: 15px; border-left: 1px dashed var(--accent); }
-
-        /* Footer */
         footer { text-align: center; padding: 40px; font-size: 0.85rem; border-top: 1px solid var(--glass); margin-top: 20px; }
-        .contact-link { color: var(--accent); text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -207,7 +179,6 @@
         <p style="line-height: 1.8;">
             Highly adaptable technical professional with <b>over 10 years of experience</b> in the Saudi Arabian market. 
             Expert in bridging the gap between Information Technology and Biomedical Engineering. 
-            Proven track record in managing critical hospital equipment and large-scale IT infrastructures.
         </p>
         <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
             <div><b>LOCATION:</b> Riyadh, KSA</div>
@@ -217,136 +188,81 @@
 
     <div id="skills" class="card">
         <h3>TECHNICAL_MATRIX</h3>
-        
         <div class="skill-group">
-            <span class="group-title">> BIOMEDICAL EQUIPMENT MAINTENANCE</span>
+            <span class="group-title">> BIOMEDICAL EQUIPMENT</span>
             <div class="skill-list">
                 <div class="skill-item">Ultrasound Machines</div>
-                <div class="skill-item">X-Ray Systems (Mobile/Fixed)</div>
+                <div class="skill-item">X-Ray Systems</div>
                 <div class="skill-item">ECG & Patient Monitors</div>
-                <div class="skill-item">Vital Sign Monitors</div>
-                <div class="skill-item">UV Sterilization Units</div>
-                <div class="skill-item">Dental Units & Lab Equipment</div>
-            </div>
-        </div>
-
-        <div class="skill-group">
-            <span class="group-title">> IT & NETWORKING INFRASTRUCTURE</span>
-            <div class="skill-list">
-                <div class="skill-item">Cisco Networking (LAN/WAN)</div>
-                <div class="skill-item">Windows Support (XP to 11)</div>
-                <div class="skill-item">ELV, BMS & SCADA Systems</div>
-                <div class="skill-item">Motherboard Chip Level Repair</div>
-                <div class="skill-item">HVAC Operational Tech</div>
-                <div class="skill-item">CCTV & Access Control</div>
+                <div class="skill-item">Sterilization Units</div>
             </div>
         </div>
     </div>
 
     <div id="exp" class="card">
-        <h3>MISSION_LOGS</h3>
-        
-        <div class="exp-box">
-            <b style="color:var(--accent-2)">Al Balsam Medical Company, Riyadh</b><br>
-            <small><b>Project:</b> Special Security Force (SSF) Hospital</small><br>
-            <i>IT & Biomedical Technician | Jan 2025 - Present</i>
-        </div>
-
-        <div class="exp-box">
-            <b>Afras Trading & Contracting Co., KSA</b><br>
-            <small>Senior IT Tech & Staff Coordinator | 2016 - 2024</small>
-        </div>
-
-        <div class="exp-box">
-            <b>HSB InfoTech / Reliance Jio Project</b><br>
-            <small>Network Engineer | 2014 - 2016</small>
-        </div>
-
-        <div class="exp-box">
-            <b>HCL Info systems / E-Court Project</b><br>
-            <small>Customer & Backend Support | 2010 - 2014</small>
-        </div>
+        <h3>WORK_HISTORY</h3>
+        <p>Experience details go here...</p>
     </div>
 
     <div id="docs" class="card">
-        <h3>SECURE_DATA_CENTER</h3>
-        <p>Aap niche diye gaye folders se mere asli certificates aur documents download kar sakte hain:</p>
-        
-        <div style="display: grid; gap: 15px; margin-top: 20px;">
-            <div style="background: var(--glass); padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;">
-                <div>
-                    <b style="display: block;">Vicky_Anand_CV_2026.pdf</b>
-                    <small>Official Resume</small>
-                </div>
-                <a href="#" class="tab-btn" style="padding: 10px 20px;">DOWNLOAD</a>
-            </div>
-
-            <div style="background: var(--glass); padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;">
-                <div>
-                    <b style="display: block;">Biomedical_Certificates.zip</b>
-                    <small>Experience & License Docs</small>
-                </div>
-                <a href="#" class="tab-btn" style="padding: 10px 20px;">VIEW ALL</a>
-            </div>
-        </div>
+        <h3>CERTIFICATIONS</h3>
+        <p>Documents and Licenses info...</p>
     </div>
 
     <footer>
-        <div style="margin-bottom: 10px;">
-            <a href="tel:+966506724002" class="contact-link">📞 +966 5067 24002</a> | 
-            <a href="mailto:AFRASVICKY.COM@GMAIL.COM" class="contact-link">📧 AFRASVICKY.COM@GMAIL.COM</a>
-        </div>
-        <p style="opacity: 0.5;">© 2026 VICKY ANAND | DESIGNED FOR EXCELLENCE</p>
+        &copy; 2026 Vicky Anand | Professional Portfolio
     </footer>
 </div>
 
 <script>
-    // Starlink Background Logic
+    // Tab System Logic
+    function showTab(event, tabId) {
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.tab-btn');
+        
+        cards.forEach(card => card.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+
+    // Starfield Background Animation
     const canvas = document.getElementById('starlink-canvas');
     const ctx = canvas.getContext('2d');
-    let particles = [];
-    function init() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-    class P {
-        constructor() { 
-            this.x = Math.random()*canvas.width; 
-            this.y = Math.random()*canvas.height; 
-            this.vx = (Math.random()-0.5)*0.5; 
-            this.vy = (Math.random()-0.5)*0.5; 
+    let stars = [];
+
+    function initCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        stars = [];
+        for (let i = 0; i < 150; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 2,
+                speed: Math.random() * 0.5
+            });
         }
-        update() { 
-            this.x+=this.vx; this.y+=this.vy; 
-            if(this.x<0||this.x>canvas.width)this.vx*=-1; 
-            if(this.y<0||this.y>canvas.height)this.vy*=-1; 
-        }
-        draw() { ctx.fillStyle = '#00d2ff'; ctx.beginPath(); ctx.arc(this.x,this.y,1.5,0,Math.PI*2); ctx.fill(); }
     }
+
     function animate() {
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        particles.forEach((p,i)=>{
-            p.update(); p.draw();
-            for(let j=i+1; j<particles.length; j++) {
-                let d = Math.hypot(p.x-particles[j].x, p.y-particles[j].y);
-                if(d<120) { 
-                    ctx.strokeStyle=rgba(0,210,255,${1-d/120}); 
-                    ctx.lineWidth=0.5; ctx.beginPath(); 
-                    ctx.moveTo(p.x,p.y); ctx.lineTo(particles[j].x,particles[j].y); ctx.stroke(); 
-                }
-            }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00d2ff';
+        stars.forEach(s => {
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+            ctx.fill();
+            s.y += s.speed;
+            if (s.y > canvas.height) s.y = 0;
         });
         requestAnimationFrame(animate);
     }
-    init(); window.onresize = init;
-    for(let i=0; i<100; i++) particles.push(new P());
-    animate();
 
-    // Tab Logic
-    function showTab(e, id) {
-        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        e.currentTarget.classList.add('active');
-        window.scrollTo({ top: document.querySelector('.nav-grid').offsetTop - 20, behavior: 'smooth' });
-    }
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+    animate();
 </script>
+
 </body>
 </html>
